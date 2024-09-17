@@ -1,3 +1,4 @@
 .env
+MongoDBhost.txt
 node_modules/
-MongMongoDB_host
+Relationship/

@@ -29,8 +29,8 @@ main()
     console.log(err);
   });
   
-async function main() {
-  await mongoose.connect(dbUrl);
+  async function main() {
+    await mongoose.connect(dbUrl);
 }
 
 app.set("view engine", "ejs");
@@ -52,7 +52,7 @@ store.on("error", () => {
   console.log("ERROR in MONGO SESSION STORE", err);
 });
 
-
+ 
 const sessionOptions = {
   store,
   secret: process.env.SECRET,
