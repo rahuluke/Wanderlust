@@ -1,0 +1,200 @@
+<!-- //-------------------------INDEX.EJS----------------------------- -->
+
+<!-- <% layout("/layouts/boilerplate") %>
+<h1>All Listingss</h1> -->
+<!-- <form method="GET" action="/listings/new">
+        <button>Creating new Button</button>
+    </form> -->
+<!-- <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+  <% for(let listing of allListings){ %>
+  <a href="/listings/<%= listing._id %>" class="listing-link">
+    <div class="card col">
+      <img
+        src="<%= listing.image %>"
+        class="card-img-top"
+        alt="listing_image"
+        style="height: 20rem"
+      />
+      <div class="card-img-overlay">Hello</div>
+      <div class="card-body">
+        <p class="card-text">
+          <b><%= listing.title %></b><br />
+          &#8377; <%= listing.price.toLocaleString("en-IN") %>/night
+        </p>
+      </div>
+    </div>
+    <% } %>
+  </a>
+</div> -->
+
+<!----------------------------SHOWE.ejs--------------------------------------->
+
+<!-- <% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+  <div class="col-8 offset-3">
+    <h3>Listing Details :</h3>
+  </div>
+  <div class="card col-6 offset-3 show-card">
+    <img
+      src="<%= listing.image %>"
+      class="card-img-top show-img"
+      alt="listing_Image"
+    />
+    <div class="card-body">
+      <p class="card-text">
+        <b><%= listing.title %></b> <br />
+        <%= listing.description %> <br />
+        &#8377; <%= listing.price.toLocaleString("en-IN") %><br />
+        <%= listing.location %><br />
+        <%= listing.country %>
+      </p>
+    </div>
+  </div>
+
+  <br />
+  <div class="btns">
+    <a
+      href="/listings/<%=listing._id %>/edit "
+      class="btn btn-dark col-1 offset-3 mb-3"
+      >Edit</a
+    >
+
+    <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
+      <button class="btn btn-dark offset-5 mb-3">Delete</button>
+    </form>
+  </div>
+</div> -->
+
+<!-------------------------------NEW>EJS---------------------------------->
+
+<!-- <% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+  <div class="col-8 offset-2">
+    <br /><br />
+    <h2>Add a New Listings</h2>
+    <form method="POST" action="/listings">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          name="Listing[title]"
+          placeholder="Add a Catchy Title"
+          type="text"
+          class="form-control"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">description</label>
+        <textarea name="listing[description]" class="form-control"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">image Link</label>
+        <input
+          name="listing[image]"
+          placeholder="Enter image URL/LINK"
+          type="text"
+          class="form-control"
+        />
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">price</label>
+          <input
+            name="listing[price]"
+            placeholder="1200"
+            type="number"
+            class="form-control"
+          />
+        </div>
+
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">country</label>
+          <input
+            name="listing[country]"
+            placeholder="India"
+            type="text"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">location</label>
+        <input
+          name="listing[location]"
+          placeholder="Raipur, Chhattisgarh"
+          type="text"
+          class="form-control"
+        />
+      </div>
+
+      <button class="btn btn-dark mb-3 add-btn">Add</button>
+    </form>
+  </div>
+</div> -->
+
+<!---------------------------EDIT.EJS----------------------------------------->
+<!-- <% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+  <div class="col-8 offset-2">
+    <h2>Edit your listings</h2>
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          name="listing[title]"
+          value="<%= listing.title %>"
+          type="text"
+          class="form-control"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">description</label>
+        <textarea name="listing[description]" class="form-control"><%= listing.description %></textarea >
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">image-Link</label>
+        <input
+          name="listing[image]"
+          value="<%= listing.image %>"
+          type="text"
+          class="form-control"
+        />
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">price</label>
+          <input
+            name="listing[price]"
+            value="<%= listing.price %>"
+            type="number"
+            class="form-control"
+          />
+        </div>
+
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">country</label>
+          <input
+            name="listing[country]"
+            value="<%= listing.country %>"
+            type="text"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">location</label>
+        <input
+          name="listing[location]"
+          value="<%= listing.location %>"
+          type="text"
+          class="form-control"
+        />
+      </div>
+      <button class="btn btn-dark edit-btn mb-3">Edit</button>
+    </form>
+  </div>
+</div> -->

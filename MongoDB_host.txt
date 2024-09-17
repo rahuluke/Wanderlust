@@ -1,0 +1,5 @@
+username = Wanderlust
+password = uX6Unq2t75wSGlxL
+
+mongodb+srv://Wanderlust:uX6Unq2t75wSGlxL@cluster0
+.oqgh4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
